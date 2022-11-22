@@ -108,7 +108,7 @@
       z0 = ak * v0 ** 2 / 2 / gra
       write(1,110) tt, z0, v0, z0, 0
 !
-      do 10 i = 0, nt - 1
+      do i = 0, nt - 1
           if(tt.le.tv) then
               qq = q0 + (qe - q0)/tv*tt
           else
@@ -140,7 +140,7 @@
           z0 = zn
           v0 = vn
 !
-   10 continue
+      end do
 !
   100 format(t8,a,t20,a,t32,a,t44,a,t56,a)
   110 format(5f12.3)
